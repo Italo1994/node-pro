@@ -1,9 +1,9 @@
 import express, { Request, Response, NextFunction } from 'express';
-import userRouter from './routes/users.route';
+import usersRouter from './routes/users.route';
 
 const app = express();
 
-app.use(userRouter);
+app.use(usersRouter);
 
 app.get('/status', (req: Request, res: Response, next: NextFunction) => {
     res.status(200).send( { foo: 'bar' } );
